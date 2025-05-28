@@ -1,0 +1,181 @@
+1.import java.util.*;
+ public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+ }
+ 2.
+ import java.util.*;
+ class Main {
+    public static void main(String[] args) {
+      int a,b;
+      Character op;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter");
+      a=sc.nextInt();
+      b=sc.nextInt();
+      op=sc.next().charAt(0);
+      int res=0;
+      switch(op){
+          case '+':res=a+b;break;
+            case '-':res=a-b;break;
+              case '*':res=a*b;break;
+                case '/':res=a/b;break;
+      }
+        System.out.println(res);
+    }
+ }
+ 3.
+ import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println(num + " is even.");
+        } else {
+            System.out.println(num + " is odd.");
+        }
+    }
+ }
+ 4.import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = sc.nextInt();
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+ }
+ 5.import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        System.out.println("Multiplication Table of " + num + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+ }
+ 6.import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter marks out of 100: ");
+        int marks = sc.nextInt();
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid marks. Please enter a value between 0 
+and 100.");
+        } else if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 80) {
+            System.out.println("Grade: B");
+        } else if (marks >= 70) {
+            System.out.println("Grade: C");
+        } else if (marks >= 60) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
+        }
+    }
+ }
+ 7.import java.util.Scanner;
+ public class Factorial {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a non-negative integer: ");
+        int number = input.nextInt();
+        if (number < 0) {
+            System.out.println("Factorial is not defined for negative 
+numbers.");
+        } else {
+            long factorial = 1;
+            for (int i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            System.out.println("Factorial of " + number + " = " + factorial);
+        }
+        input.close();
+    }
+ }
+ 8.public class Fibonacci {
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+        }
+            return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+    public static void main(String[] args) {
+        int n = 10; // Number of terms to print
+        System.out.print("Fibonacci Series up to " + n + " terms: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+ }
+ 9.import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Prompt user for number of elements
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+        if (n <= 0) {
+            System.out.println("Please enter a positive number.");
+            return;
+        }
+        int[] arr = new int[n];
+        // Read elements into the array
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        // Calculate sum
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        // Calculate average
+        double average = (double) sum / n;
+        // Display results
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + average);
+    }
+ }
+ 10.
+ import java.io.*;
+ import java.util.Scanner;
+ class GFG {
+    public static void main(String[] args) {
+        String s = "Geeks"; 
+        String r = "";
+        char ch;
+        for (int i = 0; i < s.length(); i++) {
+            ch = s.charAt(i);
+            r = ch + r; 
+        }
+        System.out.println(r);
+    }
+ }
+ 11.class Main {
+  public static void main(String[] args) {
+    String str = "Radar", reverseStr = "";
+    int strLength = str.length();
+    for (int i = (strLength - 1); i >=0; --i) {
+      reverseStr = reverseStr + str.charAt(i);
+    }
+    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
+      System.out.println(str + " is a Palindrome String.");
+    }
+    else {
+      System.out.println(str + " is not a Palindrome String.");
+    }
+  }
+ }
